@@ -1,3 +1,3 @@
 # ionic-toinou
-Test ionic \n
+Test ionic,
 Techno : Ionic
