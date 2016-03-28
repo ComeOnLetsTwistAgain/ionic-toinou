@@ -1,6 +1,10 @@
-angular.module('starter.controllers' , [])
+angular.module('starter.controllers', ['starter.factories'])
+.controller('page1Controller', ['$scope', 'factories', function($scope, factories){
+	
+	$scope.animations = factories.animations;
 
-.controller('page1Controller', function($scope) {})
+}])
 
-
-.controller('page2Controller', function($scope) {});
+.controller('page2Controller', ['$scope', function($scope){
+	
+}]);

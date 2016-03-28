@@ -1,4 +1,4 @@
-angular.module('starter.routes', [])
+angular.module('starter.routes', ['starter.factories'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -16,6 +16,12 @@ angular.module('starter.routes', [])
         templateUrl: 'page1.html',
         controller: 'page1Controller'
       }
+    },
+    resolve: {
+      animations: ['$stateParams', 'factories', 
+      function($stateParams, factories){
+        return factories.getAnimations();
+      }]
     }
   })
 
